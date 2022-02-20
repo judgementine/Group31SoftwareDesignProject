@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div>
+     <h1 class="form_title">Fuel Qoute Form</h1>
+     <div class="Box">
+        <form action="" method="get">
+            <div>
+                <label > Gallons Requested: </label> <b>
+                <input type="number" name="Gallons" id="Gallons" required>
+                *required 
+            </div> 
+            <div>
+                Delivery Address: <label id="dispAdd" > </label> <b>
+            </div>
+            <div>
+                <label >Delivery Date: </label><b></b>
+                <input type="date" name="dDate" id="dDate" required>
+            </div>
+            <div>
+                <label >Suggested Price: $1.82/Gal </label><b></b>
+            </div>
+            <button class="but" id ="entry" type="button" >Get Quote</button>
+            <div>
+                Total Amount: <label id="tot"> </label><b></b>
+            </div>
+        </form>
+        
+    </div>
+    <div class="bottom_results">
+        <h2 class="sub_title">Fuel Quote History</h2><b>
+        <table class="table" id="table">
+            <tr>
+                <th> Gallons </th>
+                <th> Address </th>
+                <th> Delivery Date </th>
+                <th> Price </th>
+                <th> Total Amount </th>
+            </tr>
+        </table>
+        
+    </div>
+</div>
+ <script src="main.js">
+ </script>
+</body>
+</html>
