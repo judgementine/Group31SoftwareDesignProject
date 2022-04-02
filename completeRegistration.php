@@ -1,3 +1,10 @@
+<?php
+
+if(isset($_POST))
+{
+    $uname = strip_tags($_POST["uname"]);
+    $psw = strip_tags($_POST["psw"]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +19,16 @@
     <div>
     <h1 class="form_title">Complete Profile</h1>
     
-    <form class="Box" id="compForm" action="FuelQuoteForm.html" method="get">
+    <form class="Box" id="compForm" action="process.php" method="post">
+        <input type="hidden" name="register" value="true" />
     <div>
     <label for="fname"><b>Full name</b></label>
     <input type="text" placeholder="John Green" name="fname" id="fname" required maxlength="50">
         <small id="fname_error"></small>
     <br> <br>
-    
+
+    <input type="hidden" value="<?= $uname ?>" name="uname" />
+    <input type="hidden" value="<?= $psw ?>" name="psw" />
     
     <label for="add1"><b>Address1:</b></label>
     <input type="text" placeholder="1342 blank st." name="add1" id="add1" required maxlength="100">
@@ -32,7 +42,7 @@
     <input type="text" placeholder="Montgommery" name="city" id="city" required maxlength="100">
         <small id="city_error"></small>
      <label for="States">State:</label>
-    <select name="states" id="state">
+    <select name="state" id="state">
         <small id="state_error"></small>
     <option value="Al">AL</option>
     <option value="Ak">AK</option>
@@ -98,13 +108,23 @@
     </form>
 </div>
 <script>
-const compF = document.getElementById('compForm')
-compF.addEventListener('submit', (e) => {
-    e.preventDefault();
-    compp();
-})
+// const compF = document.getElementById('compForm')
+// compF.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     compp();
+// })
 </script>
     <script src="main.js"> 
     </script>
 </body>
 </html>
+
+    <?php
+}else{
+    ?>
+    <script>
+        alert("You can't access this page without filling the registration form");
+        window.location.href="Register.html";
+    </script>
+    <?php
+}
