@@ -122,3 +122,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	<button type="submit">Register</button>
 </form>
 </body>
+<?php
+?>
