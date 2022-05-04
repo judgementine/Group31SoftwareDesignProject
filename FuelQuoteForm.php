@@ -55,7 +55,7 @@ if(!isset($_SESSION["user_data"])) {
                 <input type="date" name="dDate" id="dDate" required>
             </div>
             <div>
-                <label >Suggested Price: $1.50/Gal </label><b></b>
+                <label >Suggested Price: <label id="ppg"></label>/Gal </label><b></b>
             </div>
             <button class="but" id ="entry" type="submit" >Submit Quote </button>
             <br/>
@@ -151,6 +151,7 @@ if(!isset($_SESSION["user_data"])) {
             let totalAmount = gallons * suggestedPrice;
 
             $('#tot').html('$' + totalAmount.toFixed(2));
+            $('#ppg').html('$' + suggestedPrice.toFixed(2));
     }
 
     function onGetQuote() {
@@ -169,14 +170,11 @@ if(!isset($_SESSION["user_data"])) {
             },
             complete: function() {
                 onProcess(state, checkHistory);
+                
             }
         })
 
-        // 
-        // if 
-        // if user.state == TX { Lfactor = 0.1}else{0.3}
-        // do you need  to get locationF from database?
-        // var margin = current price * ( locationF )
+        
     }
 </script>
 </body>
