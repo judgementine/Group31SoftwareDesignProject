@@ -1,5 +1,5 @@
 <?php
-
+echo 'dddddd';
 if(isset($_POST))
 {
     $uname = strip_tags($_POST["uname"]);
@@ -18,7 +18,6 @@ if(isset($_POST))
 
     <div>
     <h1 class="form_title">Complete Profile</h1>
-    
     <form class="Box" id="compForm" action="process.php" method="post">
         <input type="hidden" name="register" value="true" />
     <div>
@@ -124,7 +123,7 @@ if(isset($_POST))
     ?>
     <script>
         alert("You can't access this page without filling the registration form");
-        window.location.href="Register.html";
+        window.location.href="./Register.php";
     </script>
     <?php
 }

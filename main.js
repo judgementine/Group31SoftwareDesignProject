@@ -107,12 +107,12 @@ function Valid(id, input, min, max, type) {
 
 const LoginForm = document.getElementById('LoginForm')
 if (LoginForm) {
-    LoginForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-        login();
-        // by default since we don't have a DB yet, every user is a new user when the app is launched. 
-        // These steps can be built upon once the DB is ready to validate the client's username & password are present in the DB.
-    })
+    // LoginForm.addEventListener('submit', (e) => {
+    //     e.preventDefault()
+    //     // login();
+    //     // by default since we don't have a DB yet, every user is a new user when the app is launched. 
+    //     // These steps can be built upon once the DB is ready to validate the client's username & password are present in the DB.
+    // })
 }
 
 // Homepage login 
@@ -133,14 +133,14 @@ function login() {
 
     if (User.username == null || User.password == null) {
         alert("Looks like you dont have an account. Register an new account to login");
-        window.location.href = "Register.html"
+        window.location.href = "./Register.php"
     }
     else if (User.username != uname || User.password != ppp) {
         alert("Incorrect username or password");
         return;
     }
     else {
-        window.location.href = "FuelQuoteForm.html"
+        window.location.href = "./FuelQuoteForm.php"
     }
 
 }
@@ -191,7 +191,7 @@ function compp() {
     }
     else {
         User.setInfo(fn, a1, a2, ct, st, z);
-        window.location.href = "FuelQuoteForm.html";
+        window.location.href = "./FuelQuoteForm.php";
     }
 
 }

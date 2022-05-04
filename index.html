@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><h1> <span> Login / Sign Up Form< </span> </h1></title>
+    <title>Login / Sign Up Form</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-
+<body> 
     <div class="hero-bg">
         <h1 class="form_title">Login</h1>
         <section class="top">
             <!-- <h1 class="form_title">Login</h1> -->
             <div class="Box">
-                <form action="FuelQuoteForm.html" method="get">
-               
+                <form id="LoginForm" action="./process.php" method="post">
+                    <input type="hidden" name="login" value="TRUE" />
                     <label for="username">Username: </label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="uname" id="username" required>
+                    <small id="username_error"></small>
                     <p></p>
                     <label for="password">Password: </label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="psw" id="password" required>
+                    <small id="password_error"></small>
                     <p></p>
-                   
-                    <button class="but" onclick="log()" type="submit" id="login">Login</button>
+                    
+                    <button class="but" type="submit"  id="login">Login</button>
                     <div>
                     <h3 class="sub_txt">New User?</h3>
-                    <p class="link"> <a href="Register.html"> Register here </a> </p>
+                    <p class="link"> <a href="./Register.php"> Register here </a> </p>
                     </div>
                     
                 </form>
@@ -34,6 +35,7 @@
         </section>
 
     </div>
+    
     <script src="main.js"> 
     </script>
 </body>
