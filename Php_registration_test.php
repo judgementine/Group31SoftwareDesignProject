@@ -15,6 +15,6 @@ echo "first name: tim <br> address1: 875 hopsfiel avenue <br> address2: 475 hodd
 echo "city: burmont <br> state: texas <br> zipcode: 65570 <br>";
 echo"expected result:  alert account created successfuly ";
 
-require 'process.php';
+include 'process.php';
 
 ?>

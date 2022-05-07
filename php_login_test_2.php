@@ -6,6 +6,6 @@ $_POST["psw"]=1234;
 echo "entered values: <br> Username: zimbo <br> password: 24869 <br>";
 echo"expected result:login successful";
 
-require 'login.php';
+include 'login.php';
 
 ?>

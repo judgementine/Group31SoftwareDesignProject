@@ -20,7 +20,7 @@ if($result->num_rows > 0)
 
 $_SESSION["user_data"]=$user_data;
 
-require 'appendTable.php';
+include 'appendTable.php';
 $state='tx';
 $check_history= false;
 
